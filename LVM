@@ -1,0 +1,16 @@
+LVM (Logical Volume Manager) – Logical Volume Manager manages disk drives and any other storage device. The logical volume manager 
+allows you to resize your partitions without having to modify the partition table on your hard disk. This is important when you want 
+to expand a new disk partition versus migrating all or part of the file system to a new disk.
+
+1.Physical volume (PV): A physical volume is another name for a regular physical disk partition that is used or will be used by LVM.
+2.Volume Group (VG): Any no. of physical volume on different disk drives can be added together into a volume group.
+3.Logical volume (LV): Volume groups must then be subdivided into logical volumes. Each logical volume can be individually formatted as 
+if it were a regular Linux partition. A logical volume is therefore like a virtual partition on your virtual disk drive.
+
+//Commands
+1.Create a pv: pvcreate [devices]
+2.Show a pv: pvdisplay
+3.Create a vg: vgcreate vgname [pv]
+4.Show a vg: vgdisplay
+5.Create a lv: lvcreate -n name -L[size] name
+6.Show a lv: lvdisplay
