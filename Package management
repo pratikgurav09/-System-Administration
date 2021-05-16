@@ -1,0 +1,26 @@
+Package management is a method of installing and maintaining (which includes updating and probably removing as well) software on 
+the system.
+
+Programs were only distributed as source code, along with the required man pages, the necessary configuration 
+files, and more. Nowadays, most Linux distributors use by default pre-built programs or sets of programs called packages, which are 
+presented to users ready for installation on that distribution. However, one of the wonders of Linux is still the possibility to obtain 
+source code of a program to be studied, improved, and compiled.
+
+//Package Manager
+1.To view the package details: yum info PACKAGENAME 
+2.Install a package:  yum install PACKAGENAME 
+3.Update all PAckage: yum update
+4.Remove a package: yum remove PACKAGENAME
+5.To view transaction history: yum remove PACKAGENAME
+6.To reverse a transaction: yum history undo INDEXNUMBER
+
+//Yum Repository
+1.File must exist in the /etc/yum.repos.d/ directory
+2.File must have an extension .repo
+3.If GPG check is enabled then GPG key must be mentioned
+
+
+//How package management systems work
+If a certain package requires a certain resource such as a shared library, or another package, it is said to have a dependency. All
+modern package management systems provide some method of dependency resolution to ensure that when a package is installed, all of its 
+dependencies are installed as well.
